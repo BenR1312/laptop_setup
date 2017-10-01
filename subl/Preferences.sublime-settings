@@ -1,0 +1,45 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".byebug_history",
+		".DS_Store",
+		"rspec.xml",
+		".dat*",
+		"*.nib",
+		"*.bridgesupport",
+		"*.o",
+		"*.repl_history",
+		".keep",
+		"*.svg",
+		"*.log",
+		"doc/*.html"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".sass-cache",
+		"apidocs",
+		"tmp",
+		"coverage",
+		"app/log",
+		"pdfs/generated",
+		"vendor/Pods",
+		"vendor/Testflight",
+		"build/iPhone*",
+		"node_modules"
+	],
+	"font_size": 12.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_completion": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"word_wrap": false
+}

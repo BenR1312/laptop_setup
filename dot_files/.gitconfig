@@ -1,0 +1,18 @@
+[user]
+  name = Set A Name
+  email = Use your email
+[alias]
+  br = branch
+  co = checkout
+  cp = cherry-pick
+  df = diff --color
+  st = status --porcelain
+  rb = rebase --committer-date-is-author-date
+[push]
+  default = upstream
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = ~/.global_gitignore
