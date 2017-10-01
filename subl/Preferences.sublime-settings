@@ -32,14 +32,15 @@
 		"build/iPhone*",
 		"node_modules"
 	],
-	"font_size": 12.0,
-	"ignored_packages":
+	"font_size": 14.0,
+	"rulers":
 	[
-		"Vintage"
+		120
 	],
+	"show_errors_inline": false,
 	"tab_completion": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": false,
+	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
 }

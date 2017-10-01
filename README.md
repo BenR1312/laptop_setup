@@ -1,5 +1,5 @@
 # laptop_setup
-Mac Laptop setup for new and existing moneysmart developers.
+Mac Laptop setup
 
 # Common requirements
 - Firefox (version 46.0.1) https://ftp.mozilla.org/pub/firefox/releases/
@@ -10,25 +10,37 @@ Mac Laptop setup for new and existing moneysmart developers.
 - Slack (Via the appstore or https://slack.com/signin)
 
 # Install
-Download, review and execute the setup script.
+The script has been simplified for the sake of accessibility.
+Now we go and install homebrew and install git to make our lives easier.
+go here for homebrew: https://brew.sh/
+then we can `brew install git` if we didnt have it already.
+For more information see:
+https://www.atlassian.com/git/tutorials/install-git
 
-### Zshell
+With these two installed we can now pull down this repo.
+`git clone git@github.com:moneysmartco/laptop_setup.git`
+
+And from here we run the scripts
+
+### Main Setup
 This script will download and install the latest: homebrew, ruby, zsh, and a huge asortment of other useful tools!
 Very few are strict requirements.
+
+Just double check the setup file before committing to using it.
+Then run it via shell with `sh setup`
 ```
-curl -u YOUR_USER_NAME_HERE -H "Accept: application/vnd.github.raw" -O https://raw.githubusercontent.com/moneysmartco/laptop_setup/master/setup
-less setup
+view setup
 sh setup
 ```
 
-### Bash
-TODO
-
 # Sublime setup
-To access sublime from the command line
+To access sublime from the command line eg: `subl .` to open sublime in the current directory
 `ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
 
 Setup sublime preferences and snippets.
+It adds a fair few snippets that i enjoy.
+go into the setup and run the sublime config.
+
 ```
 cd laptop_setup
 chmod +x ./sublime_config.rb
@@ -36,12 +48,19 @@ chmod +x ./sublime_config.rb
 ```
 
 # Dotfiles
-You will now have access to the basic tools to pull the repo down from github.
-`git clone git@github.com:moneysmartco/laptop_setup.git`
-From here you can chose to run the setup files for dotfiles and/or sublime snippets.
+Terminal aliases and other handy dandy configuration options are in here.
+Everything inside the `laptop_setup/dot_files` directory covers whats going on.
+
 **DISCLAIMER**
 The config script uses the force command. This means your config will be overwritten.
 It is highly recommended to backup your config files before running these.
+The main ones to ensure are backed up are:
+
+```
+.gitconfig
+.global_gitignore
+.zshrc
+```
 These dotfiles are also currently only setup for sublime text 3. as there are multiple
 aliases using sublime.
 
@@ -56,6 +75,7 @@ Individual repos will handle most of the finer detailed requirements if they are
 But common pain points are:
 
 PostgreSQL
+_You may not need to do the setup below_
 ```
 # if you havent run postgres before run
 
@@ -73,6 +93,7 @@ ALTER USER username WITH SUPERUSER;
 ```
 
 # Zsh themes and configuration
+_This is a little painful sometimes_
 If you want to use zshell and make it look pretty heres one of the quickest ways to do so.
 
 ### Oh-my-zsh
@@ -88,23 +109,10 @@ https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 When installing oh-my-zsh it will copy your current `.zshrc`.
 Any existing aliases will need to be moved back into the `.zshrc` file.
 
-### Prezto
-Prezto is another framework for zsh that has access to some themes and styles.
-https://github.com/sorin-ionescu/prezto
-
-`git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
-
-# Bash themes and configuration
-TODO
-
-# Emails and Calendar
-Select any email or calender client that you like.
-If there are any good suggestions then please talk to #Dev on slack.
-
 # Xcode
 Get it from the app store.
-
-You may run into problems if command line tools are installed after Xcode is installed. What happens is the Xcode-select developer directory gets pointed to  `/Library/Developer/CommandLineTools`.
+You may run into problems if command line tools are installed after Xcode is installed.
+What happens is the Xcode-select developer directory gets pointed to  `/Library/Developer/CommandLineTools`.
 
 Point Xcode-select to the correct Xcode Developer directory with the command:
 ```
@@ -114,3 +122,8 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
 xcodebuild -license
 ```
+
+### Git Hooks
+https://medium.com/beyond-the-manifesto/prepending-your-git-commit-messages-with-user-story-ids-3bfea00eab5a
+There is a commit-msg.sample in this repo that will work with gitx as well.
+

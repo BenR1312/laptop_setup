@@ -17,9 +17,12 @@ alias ls="ls -ah"
 alias devlog="tail -f -n 200 log/development.log"
 alias testlog="tail -f -n 200 log/test.log"
 alias be="bundle exec"
+alias ber="bundle exec rspec"
 alias bo="EDITOR=subl bundle open"
 alias bu="bundle update"
+
 alias rebuild="be rake db:drop db:create db:migrate && be rake db:seed db:test:prepare"
+alias restore="rails db:drop db:create && rails db:migrate && rails db:seed && rails db:migrate RAILS_ENV=test"
 
 ## GIT
 alias gbr="git branch"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Welcome to MoneySmart setup script thanks to thoughtbot/laptop.
+# Welcome to setup script thanks to thoughtbot/laptop.
 
 fancy_echo() {
   local fmt="$1"; shift

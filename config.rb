@@ -27,4 +27,8 @@ Dir.glob("dot_files/.*").each do |file_path|
 
   create_symlink(source, destination)
 end
-notice("Update the .gitconfig file with your user name and email")
+
+notice("Update the .gitconfig file with your user name and email eg:")
+notice("$ git config --global user.name 'your name here'")
+notice("$ git config --global user.email 'email here'")
+
