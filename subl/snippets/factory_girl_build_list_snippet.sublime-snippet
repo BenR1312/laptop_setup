@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-FactoryGirl.build_list($1, $2)
+build_list($1, $2)
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>fgbl</tabTrigger>
